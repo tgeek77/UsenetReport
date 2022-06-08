@@ -1,0 +1,8 @@
+## search for all User Agents and sort them by number
+## search all files and grep out User Agents
+grep -r User-Agent > ~/temp/User-Agents-Humanities.txt 
+
+## Remove extra fields delimited by :, sort, count, then sort by number
+cat User-Agents-Humanities.txt | cut -f 2-3 -d ':' | sort | uniq -c | sort -nr > user-agents-humanities.txt
+
+
